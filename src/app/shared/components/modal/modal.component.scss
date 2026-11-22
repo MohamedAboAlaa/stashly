@@ -1,0 +1,5 @@
+/* The modal is fully styled with daisyUI (`modal`, `modal-box`) and Tailwind
+   utilities in the template. The host only renders the fixed overlay. */
+:host {
+  display: contents;
+}

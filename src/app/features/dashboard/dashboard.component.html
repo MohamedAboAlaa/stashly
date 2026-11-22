@@ -1,0 +1,95 @@
+<section class="flex flex-col gap-8">
+  <!-- Greeting Header -->
+  <header class="flex flex-wrap items-center justify-between gap-4">
+    <div>
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+        Hello Mohamed!
+      </h1>
+      <p class="mt-1 text-sm text-base-content/60">
+        Here is a quick snapshot of your saved links and groups.
+      </p>
+    </div>
+
+    <a routerLink="/bookmarks" class="btn btn-outline">View All Bookmarks</a>
+  </header>
+
+  <!-- 6 Metrics Cards Grid -->
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="metric-card bg-linear-to-br from-indigo-600 to-violet-500">
+      <span class="metric-label">Total Bookmarks</span>
+      <strong class="metric-value">{{ totalBookmarks() }}</strong>
+    </article>
+
+    <article class="metric-card bg-linear-to-br from-emerald-600 to-teal-500">
+      <span class="metric-label">Finished Bookmarks</span>
+      <strong class="metric-value">{{ finishedBookmarks() }}</strong>
+    </article>
+
+    <article class="metric-card bg-linear-to-br from-sky-600 to-blue-500">
+      <span class="metric-label">Saved this week</span>
+      <strong class="metric-value">{{ savedThisWeek() }}</strong>
+    </article>
+
+    <article class="metric-card bg-linear-to-br from-amber-600 to-orange-500">
+      <span class="metric-label">Visited this week</span>
+      <strong class="metric-value">{{ visitedThisWeek() }}</strong>
+    </article>
+
+    <article class="metric-card bg-linear-to-br from-rose-600 to-pink-500">
+      <span class="metric-label">Pending Bookmarks</span>
+      <strong class="metric-value">{{ pendingBookmarks() }}</strong>
+    </article>
+
+    <article class="metric-card bg-linear-to-br from-slate-700 to-slate-500">
+      <span class="metric-label">Total Groups</span>
+      <strong class="metric-value">{{ totalGroups() }}</strong>
+    </article>
+  </div>
+
+  <!-- Primary CTA Button -->
+  <div class="flex justify-center">
+    <button
+      type="button"
+      class="btn btn-primary btn-lg shadow-lg shadow-primary/30"
+      (click)="openCreateModal()"
+    >
+      Add New Bookmark!
+    </button>
+  </div>
+
+  <!-- Create Bookmark Modal -->
+  @if (isFormModalOpen()) {
+    <div
+      class="modal modal-open animate-fade-in backdrop-blur-sm"
+      (click)="closeFormModal()"
+    >
+      <div
+        class="modal-box animate-pop-in w-full max-w-lg rounded-2xl border border-base-300 p-0 shadow-2xl"
+        (click)="$event.stopPropagation()"
+      >
+        <div
+          class="flex items-center justify-between border-b border-base-300 px-6 py-4"
+        >
+          <h2 class="text-lg font-semibold">Create Bookmark</h2>
+          <button
+            type="button"
+            class="btn btn-ghost btn-sm btn-circle text-lg"
+            aria-label="Close modal"
+            (click)="closeFormModal()"
+          >
+            &times;
+          </button>
+        </div>
+
+        <div class="px-6 py-5">
+          <app-bookmark-form
+            [bookmark]="null"
+            [groups]="groups()"
+            (saveCreate)="createBookmark($event)"
+            (cancel)="closeFormModal()"
+          />
+        </div>
+      </div>
+    </div>
+  }
+</section>

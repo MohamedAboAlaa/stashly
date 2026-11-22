@@ -1,0 +1,102 @@
+<article
+  class="group flex flex-1 flex-col justify-between gap-4 rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+  [class.is-finished]="isFinished()"
+  [class.is-visited]="isVisited()"
+>
+  <!-- Top Row: Status & Visit Badges -->
+  <div class="flex flex-wrap items-center justify-between gap-2">
+    <div class="flex flex-wrap items-center gap-1.5">
+      <span
+        class="badge badge-sm badge-soft font-semibold"
+        [class.badge-success]="isFinished()"
+        [class.badge-warning]="!isFinished()"
+      >
+        {{ isFinished() ? 'Finished' : 'Pending' }}
+      </span>
+
+      <span
+        class="badge badge-sm font-semibold"
+        [class.badge-info]="isVisited()"
+        [class.badge-soft]="isVisited()"
+        [class.badge-ghost]="!isVisited()"
+      >
+        {{ isVisited() ? 'Visited' : 'Unvisited' }}
+      </span>
+    </div>
+
+    @if (bookmark().createdAt) {
+      <time
+        class="text-xs text-base-content/50"
+        [attr.datetime]="bookmark().createdAt"
+      >
+        {{ bookmark().createdAt | date: 'mediumDate' }}
+      </time>
+    }
+  </div>
+
+  <!-- Main Content: Title & URL -->
+  <div class="flex min-w-0 flex-col gap-1">
+    <h3 class="truncate text-base leading-snug font-bold" [title]="bookmark().title">
+      <a
+        class="transition-colors hover:text-primary group-[.is-finished]:text-base-content/50 group-[.is-finished]:line-through"
+        [href]="bookmark().url"
+        target="_blank"
+        rel="noopener noreferrer"
+        (click)="onOpenLink($event)"
+      >
+        {{ bookmark().title }}
+      </a>
+    </h3>
+
+    <p class="truncate text-sm text-base-content/60" [title]="bookmark().url">
+      {{ bookmark().url }}
+    </p>
+  </div>
+
+  <!-- Bottom Actions -->
+  <div
+    class="flex flex-wrap items-center justify-between gap-2 border-t border-base-300 pt-3"
+  >
+    <div class="flex items-center gap-1.5">
+      <button
+        type="button"
+        class="btn btn-xs btn-soft"
+        [class.btn-success]="isFinished()"
+        (click)="onToggleFinish($event)"
+      >
+        {{ isFinished() ? 'Reopen' : 'Mark Finished' }}
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-xs btn-soft"
+        [class.btn-primary]="copied()"
+        (click)="onCopyLink($event)"
+      >
+        {{ copied() ? 'Copied!' : 'Copy Link' }}
+      </button>
+    </div>
+
+    <div class="flex items-center gap-1">
+      <button
+        type="button"
+        class="btn btn-xs btn-ghost"
+        aria-label="Edit bookmark"
+        title="Edit"
+        (click)="onEdit($event)"
+      >
+        Edit
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-xs btn-ghost text-error hover:bg-error/10"
+        aria-label="Delete bookmark"
+        title="Delete"
+        (click)="onDelete($event)"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</article>

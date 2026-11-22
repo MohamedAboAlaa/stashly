@@ -1,0 +1,6 @@
+/* `display: contents` keeps the sticky <header> positioned against the page
+   (not against this host element). Look & feel: Tailwind utilities in the
+   template + the shared `.nav-link` class from tailwind.css. */
+:host {
+  display: contents;
+}

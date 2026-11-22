@@ -1,0 +1,8 @@
+:host {
+  display: block;
+}
+
+/* Angular validation state -> daisyUI error color (border + focus ring). */
+.ng-invalid.ng-touched {
+  --input-color: var(--color-error);
+}

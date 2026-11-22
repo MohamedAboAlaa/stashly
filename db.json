@@ -1,0 +1,502 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "title": "Frontend Development",
+      "createdAt": "2026-01-06T09:00:00Z",
+      "description": "Frameworks, CSS, and browser tooling references"
+    },
+    {
+      "id": "2",
+      "title": "Backend & APIs",
+      "createdAt": "2026-01-07T09:00:00Z",
+      "description": "Server-side languages, databases, and API design"
+    },
+    {
+      "id": "3",
+      "title": "DevOps & Cloud",
+      "createdAt": "2026-01-08T09:00:00Z",
+      "description": "Containers, CI/CD, and cloud infrastructure"
+    },
+    {
+      "id": "5",
+      "title": "Learning & Courses",
+      "createdAt": "2026-01-10T09:00:00Z",
+      "description": "Tutorials, courses, and long-form reading"
+    },
+    {
+      "id": "6",
+      "title": "Productivity & Tools",
+      "createdAt": "2026-01-11T09:00:00Z",
+      "description": "Apps and utilities for everyday workflow"
+    },
+    {
+      "title": "General",
+      "description": "Default group for uncategorized or reassigned bookmarks.",
+      "createdAt": "2026-11-22T22:09:17.034Z",
+      "id": "kIQoo2uEUb8"
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "1",
+      "title": "React Documentation",
+      "createdAt": "2026-01-12T09:00:00Z",
+      "url": "https://react.dev",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "2",
+      "title": "TypeScript Handbook",
+      "createdAt": "2026-01-17T10:00:00Z",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "3",
+      "title": "MDN Web Docs",
+      "createdAt": "2026-01-22T11:00:00Z",
+      "url": "https://developer.mozilla.org",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "4",
+      "title": "Tailwind CSS Docs",
+      "createdAt": "2026-01-27T12:00:00Z",
+      "url": "https://tailwindcss.com/docs",
+      "status": "PENDING",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "5",
+      "title": "Vite Guide",
+      "createdAt": "2026-02-01T13:00:00Z",
+      "url": "https://vitejs.dev/guide/",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "6",
+      "title": "CSS-Tricks Flexbox Guide",
+      "createdAt": "2026-02-06T14:00:00Z",
+      "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "7",
+      "title": "Next.js Docs",
+      "createdAt": "2026-02-11T15:00:00Z",
+      "url": "https://nextjs.org/docs",
+      "status": "PENDING",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "8",
+      "title": "Can I Use",
+      "createdAt": "2026-02-16T16:00:00Z",
+      "url": "https://caniuse.com",
+      "status": "FINISHED",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "9",
+      "title": "web.dev Performance",
+      "createdAt": "2026-02-21T17:00:00Z",
+      "url": "https://web.dev/performance",
+      "status": "PENDING",
+      "groupId": 1,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "10",
+      "title": "Node.js Docs",
+      "createdAt": "2026-02-26T09:00:00Z",
+      "url": "https://nodejs.org/docs/latest/api/",
+      "status": "FINISHED",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "11",
+      "title": "Express Guide",
+      "createdAt": "2026-03-03T10:00:00Z",
+      "url": "https://expressjs.com/en/guide/routing.html",
+      "status": "FINISHED",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "12",
+      "title": "PostgreSQL Documentation",
+      "createdAt": "2026-03-08T11:00:00Z",
+      "url": "https://www.postgresql.org/docs/",
+      "status": "PENDING",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "13",
+      "title": "REST API Tutorial",
+      "createdAt": "2026-03-13T12:00:00Z",
+      "url": "https://restfulapi.net",
+      "status": "FINISHED",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "14",
+      "title": "GraphQL Learn",
+      "createdAt": "2026-03-18T13:00:00Z",
+      "url": "https://graphql.org/learn/",
+      "status": "PENDING",
+      "groupId": 2,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "15",
+      "title": "Prisma Docs",
+      "createdAt": "2026-03-23T14:00:00Z",
+      "url": "https://www.prisma.io/docs",
+      "status": "PENDING",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "16",
+      "title": "MongoDB Manual",
+      "createdAt": "2026-03-28T15:00:00Z",
+      "url": "https://www.mongodb.com/docs/manual/",
+      "status": "PENDING",
+      "groupId": 2,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "17",
+      "title": "OWASP Top Ten",
+      "createdAt": "2026-04-02T16:00:00Z",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "status": "FINISHED",
+      "groupId": 2,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "18",
+      "title": "Redis Documentation",
+      "createdAt": "2026-04-07T17:00:00Z",
+      "url": "https://redis.io/docs/",
+      "status": "PENDING",
+      "groupId": 2,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "19",
+      "title": "Docker Docs",
+      "createdAt": "2026-04-12T09:00:00Z",
+      "url": "https://docs.docker.com",
+      "status": "FINISHED",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "20",
+      "title": "Kubernetes Basics",
+      "createdAt": "2026-04-17T10:00:00Z",
+      "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+      "status": "PENDING",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "21",
+      "title": "GitHub Actions Docs",
+      "createdAt": "2026-04-22T11:00:00Z",
+      "url": "https://docs.github.com/en/actions",
+      "status": "FINISHED",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "22",
+      "title": "AWS Documentation",
+      "createdAt": "2026-04-27T12:00:00Z",
+      "url": "https://docs.aws.amazon.com",
+      "status": "PENDING",
+      "groupId": 3,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "23",
+      "title": "Terraform Tutorials",
+      "createdAt": "2026-05-02T13:00:00Z",
+      "url": "https://developer.hashicorp.com/terraform/tutorials",
+      "status": "PENDING",
+      "groupId": 3,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "24",
+      "title": "Nginx Beginner's Guide",
+      "createdAt": "2026-05-07T14:00:00Z",
+      "url": "https://nginx.org/en/docs/beginners_guide.html",
+      "status": "FINISHED",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "25",
+      "title": "Cloudflare Learning Center",
+      "createdAt": "2026-05-12T15:00:00Z",
+      "url": "https://www.cloudflare.com/learning/",
+      "status": "PENDING",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "26",
+      "title": "Vercel Docs",
+      "createdAt": "2026-05-17T16:00:00Z",
+      "url": "https://vercel.com/docs",
+      "status": "FINISHED",
+      "groupId": 3,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "27",
+      "title": "Figma Community",
+      "createdAt": "2026-05-22T17:00:00Z",
+      "url": "https://www.figma.com/community",
+      "status": "FINISHED",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "28",
+      "title": "Material Design",
+      "createdAt": "2026-05-27T09:00:00Z",
+      "url": "https://m3.material.io",
+      "status": "PENDING",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "29",
+      "title": "Nielsen Norman Group",
+      "createdAt": "2026-06-01T10:00:00Z",
+      "url": "https://www.nngroup.com/articles/",
+      "status": "PENDING",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "30",
+      "title": "Dribbble",
+      "createdAt": "2026-06-06T11:00:00Z",
+      "url": "https://dribbble.com",
+      "status": "FINISHED",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "31",
+      "title": "Refactoring UI",
+      "createdAt": "2026-06-11T12:00:00Z",
+      "url": "https://www.refactoringui.com",
+      "status": "PENDING",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "32",
+      "title": "Coolors Palette Generator",
+      "createdAt": "2026-06-16T13:00:00Z",
+      "url": "https://coolors.co",
+      "status": "FINISHED",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "33",
+      "title": "Laws of UX",
+      "createdAt": "2026-06-21T14:00:00Z",
+      "url": "https://lawsofux.com",
+      "status": "PENDING",
+      "groupId": "kIQoo2uEUb8",
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "35",
+      "title": "freeCodeCamp",
+      "createdAt": "2026-07-01T16:00:00Z",
+      "url": "https://www.freecodecamp.org",
+      "status": "PENDING",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "36",
+      "title": "The Odin Project",
+      "createdAt": "2026-07-06T17:00:00Z",
+      "url": "https://www.theodinproject.com",
+      "status": "PENDING",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "37",
+      "title": "CS50 Introduction to Computer Science",
+      "createdAt": "2026-07-11T09:00:00Z",
+      "url": "https://cs50.harvard.edu/x/",
+      "status": "PENDING",
+      "groupId": 5,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "38",
+      "title": "Eloquent JavaScript",
+      "createdAt": "2026-07-16T10:00:00Z",
+      "url": "https://eloquentjavascript.net",
+      "status": "FINISHED",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "39",
+      "title": "JavaScript.info",
+      "createdAt": "2026-07-21T11:00:00Z",
+      "url": "https://javascript.info",
+      "status": "PENDING",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "40",
+      "title": "Roadmap.sh",
+      "createdAt": "2026-07-26T12:00:00Z",
+      "url": "https://roadmap.sh",
+      "status": "FINISHED",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "41",
+      "title": "Frontend Masters",
+      "createdAt": "2026-07-31T13:00:00Z",
+      "url": "https://frontendmasters.com",
+      "status": "PENDING",
+      "groupId": 5,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "42",
+      "title": "Hacker News",
+      "createdAt": "2026-08-05T14:00:00Z",
+      "url": "https://news.ycombinator.com",
+      "status": "FINISHED",
+      "groupId": 5,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "43",
+      "title": "Notion",
+      "createdAt": "2026-08-10T15:00:00Z",
+      "url": "https://www.notion.so",
+      "status": "FINISHED",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "44",
+      "title": "Obsidian",
+      "createdAt": "2026-08-15T16:00:00Z",
+      "url": "https://obsidian.md",
+      "status": "PENDING",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "45",
+      "title": "Todoist",
+      "createdAt": "2026-08-20T17:00:00Z",
+      "url": "https://todoist.com",
+      "status": "FINISHED",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "46",
+      "title": "Raycast",
+      "createdAt": "2026-08-25T09:00:00Z",
+      "url": "https://www.raycast.com",
+      "status": "PENDING",
+      "groupId": 6,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "id": "47",
+      "title": "Excalidraw",
+      "createdAt": "2026-08-30T10:00:00Z",
+      "url": "https://excalidraw.com",
+      "status": "FINISHED",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "48",
+      "title": "Regex101",
+      "createdAt": "2026-09-04T11:00:00Z",
+      "url": "https://regex101.com",
+      "status": "FINISHED",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "49",
+      "title": "JSON Formatter",
+      "createdAt": "2026-09-09T12:00:00Z",
+      "url": "https://jsonformatter.org",
+      "status": "FINISHED",
+      "groupId": 6,
+      "visitStatus": "VISITED"
+    },
+    {
+      "id": "50",
+      "title": "Linear",
+      "createdAt": "2026-09-14T13:00:00Z",
+      "url": "https://linear.app",
+      "status": "PENDING",
+      "groupId": 6,
+      "visitStatus": "UNVISITED"
+    },
+    {
+      "title": "Bookmark 1",
+      "url": "http://localhost:4200/groups/2/bookmarks",
+      "groupId": "kIQoo2uEUb8",
+      "status": "FINISHED",
+      "visitStatus": "UNVISITED",
+      "createdAt": "2026-11-22T21:36:14.501Z",
+      "id": "1g2O4NG3RHM"
+    },
+    {
+      "title": "kndewkfneklfnewklfn",
+      "url": "http://localhost:4200/groups/2/bookmarks",
+      "groupId": "kIQoo2uEUb8",
+      "status": "PENDING",
+      "visitStatus": "VISITED",
+      "createdAt": "2026-11-22T22:37:46.919Z",
+      "id": "hahtYfRq9hI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

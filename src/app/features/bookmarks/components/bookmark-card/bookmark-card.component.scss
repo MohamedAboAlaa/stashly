@@ -1,0 +1,5 @@
+/* Card look is done with Tailwind / daisyUI classes in the template.
+   `display: flex` lets the inner <article> stretch to the grid row height. */
+:host {
+  display: flex;
+}

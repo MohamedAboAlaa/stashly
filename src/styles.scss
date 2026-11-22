@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   Stashly — global styles
+   --------------------------------------------------------------------------
+   Design tokens, theme (light/dark) and utility setup live in tailwind.css.
+   This file only holds global rules that utilities can't express, mostly
+   things applied from code (directives) rather than from templates.
+   All colors come from the daisyUI theme variables so they follow the
+   light / dark mode automatically.
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--color-primary) 30%, transparent);
+}
+
+/* Slim, theme-aware scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-base-300) transparent;
+}
+
+/* --- VisitedDirective ([appVisited]) ------------------------------------- */
+.visited-item {
+  opacity: 0.8;
+  border-left: 4px solid var(--color-primary);
+  background-color: color-mix(in oklab, var(--color-primary) 5%, transparent);
+
+  h3,
+  a {
+    color: color-mix(in oklab, var(--color-base-content) 65%, transparent);
+  }
+}
+
+/* --- TooltipDirective ([appTooltip]) ------------------------------------- */
+[appTooltip] {
+  position: relative;
+}
+
+.custom-tooltip-box {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-neutral);
+  color: var(--color-neutral-content);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 6px 16px -4px rgb(0 0 0 / 0.3);
+  animation: tooltip-in 0.12s ease-out both;
+}
+
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

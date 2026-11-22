@@ -1,0 +1,93 @@
+<form
+  class="flex flex-col gap-4"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  novalidate
+>
+  <!-- Title -->
+  <div class="flex flex-col gap-1.5">
+    <label for="bmTitle" class="text-sm font-semibold">Title *</label>
+    <input
+      id="bmTitle"
+      type="text"
+      class="input w-full"
+      formControlName="title"
+      placeholder="e.g., Angular Signals Guide"
+    />
+    @if (hasError('title', 'required')) {
+      <span class="text-xs font-medium text-error">Title is required.</span>
+    } @else if (hasError('title', 'maxlength')) {
+      <span class="text-xs font-medium text-error"
+        >Title must be 120 characters or fewer.</span
+      >
+    }
+  </div>
+
+  <!-- URL -->
+  <div class="flex flex-col gap-1.5">
+    <label for="bmUrl" class="text-sm font-semibold">URL *</label>
+    <input
+      id="bmUrl"
+      type="url"
+      class="input w-full"
+      formControlName="url"
+      placeholder="https://example.com"
+    />
+    @if (hasError('url', 'required')) {
+      <span class="text-xs font-medium text-error">URL is required.</span>
+    } @else if (hasError('url', 'pattern')) {
+      <span class="text-xs font-medium text-error"
+        >Enter a valid URL starting with http:// or https://.</span
+      >
+    }
+  </div>
+
+  <!-- Group -->
+  <div class="flex flex-col gap-1.5">
+    <label for="bmGroup" class="text-sm font-semibold">Group *</label>
+    <select id="bmGroup" class="select w-full" formControlName="groupId">
+      <option value="" disabled>Select a group</option>
+      @for (grp of groups(); track grp.id) {
+        <option [value]="grp.id">{{ grp.title }}</option>
+      }
+    </select>
+    @if (hasError('groupId', 'required')) {
+      <span class="text-xs font-medium text-error">Please choose a group.</span>
+    }
+  </div>
+
+  <!-- Status & Visit Status Row -->
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="flex flex-col gap-1.5">
+      <label for="bmStatus" class="text-sm font-semibold">Status</label>
+      <select id="bmStatus" class="select w-full" formControlName="status">
+        <option value="PENDING">Pending</option>
+        <option value="FINISHED">Finished</option>
+      </select>
+    </div>
+
+    <div class="flex flex-col gap-1.5">
+      <label for="bmVisitStatus" class="text-sm font-semibold"
+        >Visit Status</label
+      >
+      <select
+        id="bmVisitStatus"
+        class="select w-full"
+        formControlName="visitStatus"
+      >
+        <option value="UNVISITED">Unvisited</option>
+        <option value="VISITED">Visited</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="mt-1 flex justify-end gap-3 border-t border-base-300 pt-4">
+    <button type="button" class="btn btn-ghost" (click)="onCancel()">
+      Cancel
+    </button>
+    <button type="submit" class="btn btn-primary">
+      {{ bookmark() ? 'Save Changes' : 'Create Bookmark' }}
+    </button>
+  </div>
+</form>

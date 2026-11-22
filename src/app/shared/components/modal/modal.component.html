@@ -1,0 +1,41 @@
+@if (isOpen()) {
+  <div
+    class="modal modal-open animate-fade-in backdrop-blur-sm"
+    (click)="onBackdropClick()"
+  >
+    <div
+      class="modal-box animate-pop-in flex max-h-[90vh] w-full flex-col overflow-hidden rounded-2xl border border-base-300 p-0 shadow-2xl"
+      [class.max-w-sm]="size() === 'sm'"
+      [class.max-w-xl]="size() === 'md'"
+      [class.max-w-3xl]="size() === 'lg'"
+      [class.max-w-5xl]="size() === 'xl'"
+      role="dialog"
+      aria-modal="true"
+      (click)="$event.stopPropagation()"
+    >
+      <div
+        class="flex items-center justify-between gap-3 border-b border-base-300 px-6 py-4"
+      >
+        <h2 class="text-lg font-semibold">
+          <ng-content select="[modal-header]"></ng-content>
+        </h2>
+        <button
+          type="button"
+          class="btn btn-ghost btn-sm btn-circle"
+          (click)="closeModal()"
+          aria-label="Close modal"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto px-6 py-5">
+        <ng-content></ng-content>
+      </div>
+
+      <div
+        class="flex items-center justify-end gap-3 border-t border-base-300 bg-base-200/60 px-6 py-4 empty:hidden"
+      ><ng-content select="[modal-footer]"></ng-content></div>
+    </div>
+  </div>
+}

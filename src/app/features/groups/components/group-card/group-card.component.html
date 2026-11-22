@@ -1,0 +1,59 @@
+<article
+  class="flex flex-1 cursor-pointer flex-col justify-between gap-4 rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10"
+  (click)="onCardClick()"
+>
+  <div class="flex items-start justify-between gap-3">
+    <h3
+      class="text-lg font-semibold leading-snug break-words"
+      [appTooltip]="group().title"
+    >
+      {{ group().title }}
+    </h3>
+
+    <div class="flex shrink-0 items-center gap-1">
+      @if (!isDefaultGroup()) {
+        <button
+          type="button"
+          class="grid size-8 place-items-center rounded-lg text-sm transition-colors hover:bg-base-200"
+          appTooltip="Edit group"
+          aria-label="Edit group"
+          (click)="onEditClick($event)"
+        >
+          ✏️
+        </button>
+        <button
+          type="button"
+          class="grid size-8 place-items-center rounded-lg text-sm transition-colors hover:bg-error/15"
+          appTooltip="Delete group"
+          aria-label="Delete group"
+          (click)="onDeleteClick($event)"
+        >
+          🗑️
+        </button>
+      }
+    </div>
+  </div>
+
+  <p class="min-h-11 text-sm leading-relaxed text-base-content/60">
+    {{ group().description | truncate: 110 }}
+  </p>
+
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="badge badge-ghost">
+      Bookmarks: <strong>{{ totalBookmarks() }}</strong>
+    </span>
+    <span class="badge badge-success badge-soft">
+      Finished: <strong>{{ finishedBookmarks() }}</strong>
+    </span>
+  </div>
+
+  <footer class="flex items-center justify-between border-t border-base-300 pt-3">
+    @if (group().createdAt) {
+      <span class="text-xs text-base-content/50">
+        Created {{ group().createdAt | date: "mediumDate" }}
+      </span>
+    } @else {
+      <span class="text-xs text-base-content/50">No creation date</span>
+    }
+  </footer>
+</article>

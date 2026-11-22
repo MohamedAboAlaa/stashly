@@ -1,0 +1,58 @@
+<form
+  id="groupFormId"
+  class="flex flex-col gap-5"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="flex flex-col gap-1.5">
+    <label for="groupTitle" class="text-sm font-semibold">
+      Title <span class="text-error">*</span>
+    </label>
+    <input
+      id="groupTitle"
+      type="text"
+      class="input w-full"
+      formControlName="title"
+      placeholder="e.g. Angular Resources, System Design..."
+      autocomplete="off"
+    />
+    @if (titleControl.invalid && (titleControl.touched || titleControl.dirty)) {
+      <small class="text-xs font-medium text-error">
+        @if (titleControl.hasError("required")) {
+          Group title is required.
+        } @else if (titleControl.hasError("minlength")) {
+          Title must be at least 2 characters.
+        } @else if (titleControl.hasError("maxlength")) {
+          Title cannot exceed 80 characters.
+        }
+      </small>
+    }
+  </div>
+
+  <div class="flex flex-col gap-1.5">
+    <label for="groupDescription" class="text-sm font-semibold"
+      >Description</label
+    >
+    <textarea
+      id="groupDescription"
+      class="textarea min-h-24 w-full resize-y"
+      rows="3"
+      formControlName="description"
+      placeholder="Short note about what links belong here..."
+    ></textarea>
+    @if (
+      descriptionControl.invalid &&
+      (descriptionControl.touched || descriptionControl.dirty)
+    ) {
+      <small class="text-xs font-medium text-error">
+        @if (descriptionControl.hasError("required")) {
+          Group description is required.
+        } @else if (descriptionControl.hasError("minlength")) {
+          Description must be at least 5 characters.
+        } @else if (descriptionControl.hasError("maxlength")) {
+          Description cannot exceed 250 characters.
+        }
+      </small>
+    }
+  </div>
+</form>
